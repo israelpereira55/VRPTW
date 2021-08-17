@@ -75,9 +75,9 @@ The Vehicle Routing Problem (VRP) is a known combinatorial problem for it's diff
 ## Getting Started
 
 First you need a MDVRPTW problem instancy, which you can get on VRP Libraries.
-We will list some libraries in which you can get them. We have the "instances" folder with Cordeuat and Vidal MDVRPTW instances, mostly for backup purposes but You can use them too!
+We will list some libraries in which you can get them. We have the "instances" folder Solomon VRPTW instances with 25 clients but You can get instances with more clients!
 
-You can also make your own instance, but it needs to follow Cordeaut standards. 
+You can also make your own instance, but it needs to follow Solomon standards. 
 
 * [VRP-REP](http://www.vrp-rep.org/variants/item/vrptw.html)
 * [NEO LCC](https://neo.lcc.uma.es/vrp/vrp-instances/)
@@ -108,13 +108,20 @@ Here we describe the algorithm parameters.
 ```bash
     main.py:
         (obrigatory)
-        --instance: path to the MDVRPTW instance.
-        (default: None)
+        --instance: path to the VRPTW instance.
+
+        --N: number of clients
+
+        (optional)
+        --[no]toy: run with a toy instance.
+        (default: False)
 ```
 
 * Example of usage:
    ```
-   python main.py --instance ./instances/cordeau-al-2001-mdvrptw/pr01.txt
+   python3 main.py --instance ./instances/solomon_25/C101.txt --N 25
+
+   python main.py --toy
    ```
 
 
