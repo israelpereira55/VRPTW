@@ -31,7 +31,7 @@
   <p align="center">
     This is an algorithm that seeks to get the optimum solutions for the VRPTW. 
     <br />
-    On this state it just build a constructive solution with the Solomon Insertion I1 heuristic (1987).
+    On this state it just build a constructive solution with Solomon Insertion I1 heuristic (1987).
     I'm currently working on the MDVRPTW, but to solve MDVRPTW I need to solve the VRPTW too! I plan to come back for this algorithm after I finish my research on the MDVRPTW. See ya! =)
     <br />
   </p>
