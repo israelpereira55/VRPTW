@@ -1,6 +1,6 @@
 import numpy as np
 
-from vrptw import Solution
+from vrp import Solution
 
 from operator import itemgetter #to get max in a tuple, stackoverflow says its faster than lambda and pure python, see bellow and check someday 
 # https://stackoverflow.com/questions/13145368/find-the-maximum-value-in-a-list-of-tuples-in-python
@@ -15,12 +15,9 @@ def create_route_farthest_clienter(vrptw_instance, ordered_tuple):
 
 
 '''    EXAMPLE:
-
     distances = [0, -1, 3, 2]xz
-
     ordered_indexers = np.argsort(distances) = ([1, 0, 3, 2])
     ordered_clients_distance = []
-
 '''
 def create_tuple_ordered_clients_by_distance(vrptw_instance):
     tuple_clients = [[0,0]] * (vrptw_instance.number_of_clients -1) #depot
@@ -165,5 +162,3 @@ def insertion_heuristic(vrptw_instance, alpha1=0.5, alpha2=0.5, mu=1, lambdaa=1,
 
 
     solution.print_solution(vrptw_instance)
-
-

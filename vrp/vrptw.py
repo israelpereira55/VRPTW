@@ -1,6 +1,7 @@
 import numpy as np
 import math
 
+import geometry
 
 class VRPTW:
     #coordinates   [x,y]   
@@ -38,7 +39,6 @@ class VRPTW:
 
 
         self.number_of_vehicles, self.vehicle_capacity = (int(x) for x in lines[0].split())
-        #print(number_of_vehicles, vehicle_capacity)
 
         for i in range(self.number_of_clients):
             line = lines[5 + i]
@@ -51,60 +51,7 @@ class VRPTW:
             self.services[i] = service
             self.demands[i] = demand
 
-        self.travel_times = self.distances = self.calculate_distance_matrix(self.coordinates)
-
-
-    def calculate_distance_matrix(self,coordinates, ro1=1, ro2=0):
-        #number_of_lines,number_of_columns = coordinates.shape
-
-        number_of_lines = len(coordinates)
-        distances = np.zeros((number_of_lines, number_of_lines))
-        #travel_times = np.zeros((number_of_lines, number_of_lines))
-
-        for i in range(number_of_lines):
-            x1,y1 = coordinates[i]
-            for j in range(i, number_of_lines):
-                x2,y2 = coordinates[j]
-                distances[i][j] = distances[j][i] = math.sqrt( (x1-x2)**2 + (y1-y2)**2 )
-
-                #travel_times[i][j] = ro1 * distances[i][j] + ro2 * time_windows
-
-        return distances
-
-    #def calculate_travel_time
-
-
-    def create_renatos_example(self,):
-        self.distances = [ [ 0,28,31,20,25,34],
-                                           [28, 0,21,29,26,20],
-                                           [31,21, 0,38,20,32],
-                                           [20,29,38, 0,30,27],
-                                           [25,26,20,30, 0,25],
-                                           [34,20,32,27,25, 0]
-                                         ]
-
-        self.time_windows = [ [0,1000],
-                                            [2,5],
-                                            [4,6],
-                                            [2,3],
-                                            [5,8],
-                                            [0,3]
-                                          ]
-
-        self.travel_times = [ [ 0, 2, 3, 1, 2, 3],
-                                          [ 2, 0, 1, 2, 2, 1],
-                                          [ 3, 2, 0, 4, 1, 3],
-                                          [ 1, 2, 4, 0, 3, 2],
-                                          [ 2, 2, 1, 3, 0, 2],
-                                          [ 3, 1, 3, 2, 2, 0]
-                                        ]
-
-        self.services = [0, 3, 2, 4, 1, 4]
-        self.demands =  [ 0,37,35,30,25,32]
-
-        self.number_of_vehicles = 25
-        self.vehicle_capacity = 100
-
+        self.travel_times = self.distances = geometry.distances.calculate_distance_matrix(self.coordinates)
 
     def print_instance(self):
         print("=================================== VRPTW INSTANCE ========================================")
@@ -130,6 +77,3 @@ class VRPTW:
 
         print("\n  SERVICE")
         print(self.services, "\n")
-        #return vrptw_example
-
-

@@ -94,4 +94,3 @@ class Solution:
             route_starting_times[j] = self.calculate_starting_time(vrptw_instance, i, bi, j, route_index) #bj
 
         return route_starting_times
-

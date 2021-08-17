@@ -10,26 +10,24 @@ flags.DEFINE_boolean("toy", False, 'Boolean flag.')
 #flags.DEFINE_boolean("debug_level2", False, 'Boolean flag.')
 
 
-from vrptw import VRPTW, solomon
-
+from vrp import VRPTW, solomon, example
 
 
 def main(argv):
 
     if FLAGS.toy:
-        vrptw_instance = VRPTW(number_of_clients=6)
-        vrptw_instance.create_renatos_example()
-        vrptw_instance.print_instance()
-        solomon.insertion_heuristic(vrptw_instance, alpha1=0.5, alpha2=0.5, mu=1, lambdaa=1, debug=True, debug_level2=True)
+        vrptw = example.create_renatos_example()
+        vrptw.print_instance()
+        solomon.insertion_heuristic(vrptw, alpha1=0.5, alpha2=0.5, mu=1, lambdaa=1, debug=True, debug_level2=True)
     else:
         if FLAGS.instance is not None:
-            vrptw_instance = VRPTW(FLAGS.N +1) #depot
-            vrptw_instance.read_instance(FLAGS.instance)
+            vrptw = VRPTW(FLAGS.N +1) #depot
+            vrptw.read_instance(FLAGS.instance)
         else:
             print("Please describe the instace file.\nAborting...")
             exit(1)
-        vrptw_instance.print_instance()
-        solomon.insertion_heuristic(vrptw_instance, alpha1=0.5, alpha2=0.5, mu=1, lambdaa=1, debug=False, debug_level2=False)
+        vrptw.print_instance()
+        solomon.insertion_heuristic(vrptw, alpha1=0.5, alpha2=0.5, mu=1, lambdaa=1, debug=False, debug_level2=False)
     
     
 
