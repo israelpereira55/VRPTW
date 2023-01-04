@@ -31,7 +31,7 @@
   <p align="center">
     This is an algorithm that seeks to get the optimum solutions for the VRPTW. 
     <br />
-    On this state it just build a constructive solution with Solomon Insertion I1 heuristic (1987).
+    In this state, it just builds a constructive solution with Solomon Insertion I1 heuristic (1987).
     I'm currently working on the MDVRPTW, but to solve MDVRPTW I need to solve the VRPTW too! I plan to come back for this algorithm after I finish my research on the MDVRPTW. See ya! =)
     <br />
   </p>
@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The Vehicle Routing Problem (VRP) is a known combinatorial problem for it's difficult (NP-hard). On this project, we seek to solve the Vehicle Routing Problem with Time Windows (VRPTW). 
+The Vehicle Routing Problem is a known hard-to-solve combinatorial problem (NP-hard). In this project, we seek to solve the Vehicle Routing Problem with Time Windows (VRPTW). 
 
 
 
@@ -74,10 +74,10 @@ The Vehicle Routing Problem (VRP) is a known combinatorial problem for it's diff
 <!-- GETTING STARTED -->
 ## Getting Started
 
-First you need a MDVRPTW problem instancy, which you can get on VRP Libraries.
+First, you need a MDVRPTW problem instancy, which you can get on VRP Libraries.
 We will list some libraries in which you can get them. We have the "instances" folder Solomon VRPTW instances with 25 clients but You can get instances with more clients!
 
-You can also make your own instance, but it needs to follow Solomon standards. 
+You can also make your instance, but it needs to follow Solomon standards. 
 
 * [VRP-REP](http://www.vrp-rep.org/variants/item/vrptw.html)
 * [NEO LCC](https://neo.lcc.uma.es/vrp/vrp-instances/)
