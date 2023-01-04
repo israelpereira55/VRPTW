@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The Vehicle Routing Problem (VRP) is a known combinatorial problem for it's difficult (NP-hard). On this project, we seek to solve the  Vehicle Routing Problem with Time Windows (VRPTW) which is harder!. 
+The Vehicle Routing Problem (VRP) is a known combinatorial problem for it's difficult (NP-hard). On this project, we seek to solve the Vehicle Routing Problem with Time Windows (VRPTW). 
 
 
 
