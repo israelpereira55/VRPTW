@@ -74,10 +74,10 @@ The Vehicle Routing Problem is a known hard-to-solve combinatorial problem (NP-h
 <!-- GETTING STARTED -->
 ## Getting Started
 
-First, you need a MDVRPTW problem instancy, which you can get on VRP Libraries.
-We will list some libraries in which you can get them. We have the "instances" folder Solomon VRPTW instances with 25 clients but You can get instances with more clients!
+First, you need a VRPTW problem instance, which you can get on VRP Libraries.
+We will list some libraries in which you can get them. We have the "instances" folder Solomon VRPTW instances with 25 clients that can be used as an example, but You can get instances with any amount of clients.
 
-You can also make your instance, but it needs to follow Solomon standards. 
+You can also make your instance, but it needs to follow Solomon's standards. 
 
 * [VRP-REP](http://www.vrp-rep.org/variants/item/vrptw.html)
 * [NEO LCC](https://neo.lcc.uma.es/vrp/vrp-instances/)
